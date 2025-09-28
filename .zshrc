@@ -2,6 +2,11 @@
 # Version 0.1.0
 #
 
+# Source shell defaults if available
+if [[ -f ~/.shell_defaults ]]; then
+    source ~/.shell_defaults
+fi
+
 # Zinit Installation & Plugin Management
 # --------------------------------------
 ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
