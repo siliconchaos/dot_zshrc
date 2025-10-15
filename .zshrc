@@ -111,7 +111,7 @@ bindkey '\C-x\C-e' edit-command-line
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 # Load starshipt prompt
-if command -v starship &> /dev/null && [[ $ENABLE_STARSHIP:-true == true ]]; then
+if command -v starship &> /dev/null && [[ ${ENABLE_STARSHIP:-true} == true ]]; then
     # suppress starship warning
     export STARSHIP_LOG="error"
     eval "$(starship init zsh)"
