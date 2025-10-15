@@ -2,7 +2,13 @@
 # Shell defaults hook: sourced before the main zshrc runs.
 # Ideal place for environment variables and shared cross-host settings.
 # Example:
-# export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
-export ENABLE_STARSHIP=true
-export ENABLE_FASTFETCH=false
+# Set ENABLE_STARSHIP based on terminal - disable in Warp, enable elsewhere
+if [ "$TERM_PROGRAM" = "WarpTerminal" ]; then
+    export ENABLE_STARSHIP=false
+else
+    export ENABLE_STARSHIP=true
+fi
+export ENABLE_FASTFETCH=true
+
