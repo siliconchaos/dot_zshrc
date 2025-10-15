@@ -118,7 +118,11 @@ if command -v starship &> /dev/null && [[ ${ENABLE_STARSHIP:-true} == true ]]; t
     unset ENABLE_STARSHIP
 fi
 
-[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
+# fzf integration
+if command -v fzf &> /dev/null; then
+    eval "$(fzf --zsh)"
+    zinit load Aloxaf/fzf-tab
+fi
 
 if command -v fastfetch &> /dev/null && [[ ${ENABLE_FASTFETCH:-false} == true ]]; then
     fastfetch
