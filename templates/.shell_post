@@ -1,0 +1,5 @@
+# shellcheck shell=sh
+# Shell post hook: sourced after the main zshrc finishes.
+# Use this for host-specific tweaks or temporary overrides that shouldn't be shared.
+# Example:
+# export PATH="$HOME/.local/bin:$PATH"

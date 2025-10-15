@@ -1,0 +1,8 @@
+# shellcheck shell=sh
+# Shell defaults hook: sourced before the main zshrc runs.
+# Ideal place for environment variables and shared cross-host settings.
+# Example:
+# export PATH="$HOME/.local/bin:$PATH"
+
+export ENABLE_STARSHIP=true
+export ENABLE_FASTFETCH=false
